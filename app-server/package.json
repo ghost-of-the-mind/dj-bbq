@@ -1,6 +1,6 @@
 {
   "name": "dj-bbq",
-  "version": "2.0.1",
+  "version": "1.0.0",
   "description": "A re-design of the https://djbbq.com/ website",
   "author": "Bruno Lauris",
   "main": "server.js",
@@ -38,10 +38,7 @@
     "dev": "concurrently \"nodemon server.js\" \"npm run app-front\"",
     "server": "node server.js",
     "nodemon": "nodemon server.js",
-    "build": "react-scripts build",
-    "eject": "react-scripts eject",
-    "analyze": "source-map-explorer 'build/static/js/*.js'",
-    "dev-start": "react-scripts start"
+    "analyze": "source-map-explorer 'build/static/js/*.js'"
   },
   "eslintConfig": {
     "extends": [

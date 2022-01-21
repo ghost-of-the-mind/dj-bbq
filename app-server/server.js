@@ -1,7 +1,7 @@
 const express = require('express');
 const helmet = require('helmet'); 
 const cors = require('cors'); 
-//* const path = require('path'); // Allows to access files through the server in our filesystem
+const path = require('path'); // Allows to access files through the server in our filesystem
 const fileUpload = require('express-fileupload'); // Parses multipart/form-data requests, extracts the files if available, and make them available under req.files property.
 
 //*  ------------- GENERAL SETUP -------------
@@ -93,17 +93,15 @@ const fileUpload = require('express-fileupload'); // Parses multipart/form-data 
 
 //* ------- STATIC ASSETS -------
 
-/*
 // From where the app will serve static files
     if (process.env.NODE_ENV !== 'production') {
         // Determines from where to load static files or client files
-            app.use(express.static(path.join(__dirname, 'public')));
+            app.use(express.static(path.join(__dirname, '../app-front/public')));
     
     } else if (process.env.NODE_ENV === 'production') {
         // Serve static files from production version aka build folder 
-            app.use(express.static(path.join(__dirname, './build'))); 
+            app.use(express.static(path.join(__dirname, '../app-front/build'))); 
     }
-*/
 
 //* -------------- SERVER ----------------
        
