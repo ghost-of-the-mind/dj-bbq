@@ -13,7 +13,7 @@ const digitalOcealProxy = prodProxy + '/' + digitalOceanPort;
 const customProxy = nodeEnv ? devProxy : digitalOcealProxy;
 */
 
-const customProxy = 'http://dj-bbq-app-server:8080';
+const customProxy = 'https://dj-bbq-app-server:8080';
 
 export default customProxy;
 
