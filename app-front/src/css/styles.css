@@ -1,0 +1,809 @@
+/*
+    1. CSS VARIABLES
+        Color palette
+    2. GLOBAL STYLES
+        Print formating
+    3. GRID BOX
+    4. SECTION STYLES
+        Nav Section
+        About Section
+        Main Section
+            Recipe Section
+            Contact Form Section
+            Product Page Section
+            Cart Page Section
+        Footer Section
+            Newsletter Section
+            Site-map Section
+    6. FEATURES
+    7. ANIMATIONS
+    8. MEDIA QUERIES
+
+    X.  CSS RESET
+    XX. TESTING CSS
+*/
+
+/************ 1. CSS VARIABLES 
+*/
+
+:root {
+
+    /* Color palette */
+
+    --main-background-color : #1b1b1b;
+    --main-accent-color : #FD9C01;
+    --green-button-color : #234D31;
+    --p-text-color : #f8f8ff; 
+
+    --night-rider-black : var(--main-background-color);
+    --ghost-white : var(--p-text-color);
+    --blood-orange : var(--main-accent-color);
+
+}
+
+@media screen and (min-width: 320px) {
+    :root {
+        --add-top-margin : 16%;
+        --add-top-margin-mini : 7%;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    :root {
+        --add-top-margin : 7%;
+        --add-top-margin-mini : 3%;
+    }
+}
+
+/************ 2. GLOBAL STYLES 
+*/
+
+html {
+    background-color: var(--night-rider-black);
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--blood-orange);
+}
+
+p {
+    color: var(--ghost-white);
+}
+
+a {
+    color: var(--blood-orange);
+}
+
+input, textarea, select {
+    background-color: var(--ghost-white);
+}
+
+/************ 3. GRID BOX 
+*/
+
+/* Nav section grid */
+.nav-bar-grid {
+    display: grid;
+    
+    grid-template-rows: auto;
+    grid-template-columns: repeat(auto-fit, minmax(89px, 100px));    
+
+    align-items: center;
+    align-content: center;
+
+    justify-items: center;
+    justify-content: space-evenly;
+}
+
+/* About section grid */
+
+.about-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+
+    gap: 1rem 2rem;
+
+    padding: 1rem 3rem;
+
+    justify-items: center;
+    align-items: center;
+}
+
+/* Recipe list section grid */
+
+.recipe-card-grid {
+    display: grid;
+
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 700px));
+
+    align-content: center;
+    justify-content: center;
+
+    grid-auto-columns: auto;
+    grid-auto-rows: auto;
+
+    grid-auto-flow: row;
+}
+
+/* Store page grid */
+
+.product-card-grid {
+    display: grid;
+
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 700px));
+
+    align-content: center;
+    justify-content: center;
+
+    grid-auto-columns: auto;
+    grid-auto-rows: auto;
+
+    grid-auto-flow: row;
+}
+
+/* Footer section grid */
+
+.footer-grid {
+    display: grid;
+
+    grid-template-rows: auto;
+    grid-template-columns: repeat(auto-fit, 1fr);
+
+    align-content: center;
+    justify-content: center;
+    
+    justify-items: center;
+    align-items: center;
+}
+
+/************ 4. SECTION STYLES 
+*/
+
+/*------ Nav Section 
+*/
+
+nav {
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    top: 0;
+
+    opacity: 1;
+    background-color: var(--night-rider-black);
+
+    border-bottom: var(--blood-orange) 3px solid;
+}
+
+nav ul {
+    padding: 0;
+    margin: 12px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--blood-orange);
+}
+
+/*
+.logo-img {
+    max-width: 100px;
+    height: auto;
+}
+*/
+
+/*------ About Section 
+*/
+
+#about-section {
+    margin-top: var(--add-top-margin);
+}
+
+#about-section h2 {
+    margin-top: 0;
+}
+
+.about-card-media h4 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.about-card-img {
+    width: 100%;
+    max-height: 1000px;
+
+    border-bottom: var(--blood-orange) 8px solid;
+}
+
+.about-card-list {
+    margin-top: 0;
+}
+
+.about-card-list li {
+    list-style-type: georgian;
+    color: var(--blood-orange);
+    font-size: 1.4rem;
+}
+
+/*------ Main Section 
+*/
+
+main {
+    margin-top: var(--add-top-margin);
+}
+
+main article {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+/*------ Recipe Section
+*/
+
+.recipe-section {
+    margin-top: 1rem;
+}
+
+.recipe-section-title {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.recipe-card {
+    border-bottom: var(--blood-orange) 8px groove;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.recipe-card-image {
+    max-height: 320px;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.recipe-card table {
+    text-align: center;
+    vertical-align: middle;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    border-collapse: collapse;
+}
+
+.recipe-card table tbody tr {
+    display: inline;
+}
+
+.recipe-card table tbody tr td {
+    padding-left: 0.6rem;
+    padding-right: 0.6rem;
+}
+
+.recipe-card-clock-icon,
+.recipe-card-servings-icon {
+    max-height: 58px;
+}
+
+/*------ Contact Form Section
+*/
+
+.contact-form-intro {
+    margin-left: auto;
+    margin-right: auto;
+
+    max-width: 80%;
+    margin-bottom: 2rem;
+}
+
+.contact-form-title {
+    text-align: center;
+}
+
+.contact-form {
+    text-align: center;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+}
+
+.contact-form label {
+    font-family: 'Northwest';
+    font-size: 1.2rem;
+    color: var(--blood-orange);
+    display: block;
+}
+
+.contact-form .checkbox-label {
+    display: inline-block;
+}
+
+.contact-form input, 
+.contact-form textarea, 
+.contact-form button  {
+    font-family: 'Spectral';
+    font-size: 100%;
+
+    margin: 1rem;
+}
+
+.contact-form input {
+    text-align: center;
+}
+
+.contact-form input[type=checkbox] {
+    transform: scale(2);
+
+    padding: 1rem;
+    margin: 1rem;
+
+    cursor: pointer;
+}
+
+/*------ Product Page Section
+*/
+
+.product-page-title {
+    text-align: center;
+}
+
+.product-card {
+    border-bottom: var(--blood-orange) 8px groove;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.product-card-title {
+    text-align: center;
+}
+
+.product-card table,
+.product-card-image {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.product-card-image {
+    max-height: 280px;
+
+    display: block;
+}
+
+.product-card table tbody tr {
+    text-align: center;
+}
+
+/*------ Cart Page Section
+*/
+
+.cart-badge {
+    font-size: 0.5rem;
+    background: #FD9C01;
+    color: #f8f8ff;
+    padding: 5px 7px;
+    vertical-align: top;
+    margin-left: -0.2rem;
+
+    padding-left: 9px;
+    padding-right: 9px;
+    border-radius: 9px;
+}
+
+.cart-section {
+    max-width: 85%;
+    margin-right: auto;
+    margin-left: auto;
+
+    margin-bottom: 3rem;
+}
+
+.cart-item {
+    display: table;
+    width: 100%;
+    table-layout: fixed;   /* For cells of equal size */
+    
+    margin-top: 1rem;
+    padding-bottom: 1rem;
+    
+    border-bottom: var(--main-accent-color) groove;
+}
+
+.cart-item * {
+    display: table-cell;
+    text-align: center;
+}
+
+.cart-item-image {
+    display: inline-block;
+    width: auto;
+    max-height: 100px;
+}
+
+.cart-item-images,
+.cart-item-name,
+.cart-item-price,
+.cart-item-buttons {
+    vertical-align: middle;
+}
+
+.cart-calc {
+    margin-top: 2rem;
+}
+
+.cart-calc p {
+    padding: 0;
+    margin: 1rem;
+}
+
+.cart-calc .cart-total {
+    text-align: center;
+    margin: 2rem;
+}
+
+.cart-checkout-button {
+    text-align: center;
+    margin: 2rem;
+}
+
+/*------ Footer Section 
+*/
+
+footer {
+    min-height: 12rem;
+    width: 100%;
+
+    border-top: var(--blood-orange) 8px groove;
+}
+
+.footer-title {
+    margin: 0;
+    padding: 0;
+
+    margin-top: 2rem;
+}
+
+.footer-social-icons img {
+    width: auto;
+    max-height: 62px;
+
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.footer-copy p {
+    font-size: 0.6rem;
+}
+
+/*------ Newsletter Section
+*/
+
+.newsletter-section {
+    max-width: 80%;
+    margin-top: 0.5rem;
+}
+
+.newsletter-section h4 {
+    margin: 0.5rem;
+}
+
+.newsletter-button {
+    display: inline-block;
+}
+
+/*------ Site-map Section
+*/
+
+.site-map-section {
+    margin-top: 0.5rem;
+}
+
+.site-map-section h4 {
+    text-align: center;
+
+    margin: 20px;
+}
+
+.site-map {
+    column-count: 2;
+    column-span: all;
+}
+
+.site-map ul {
+    margin: 0;
+    padding: 0;
+}
+
+/*********** 6. FEATURES
+*/
+
+strong {
+    color: var(--blood-orange);
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.responsive-media {
+    width: 100%;
+    height: auto;
+}
+
+.intro-video-section {
+    margin-top: var(--add-top-margin-mini);
+}
+
+.trap-input {
+    display: none;
+}
+
+.scroll-to-top-button {
+    position: fixed;
+    z-index: 99; 
+    bottom: 1.5rem;
+    right: 1rem;
+
+    border: solid;
+    border-color: var(--main-background-color);
+    border-radius: 50%;
+    outline: none;
+    text-align: center;
+    text-decoration: none;
+
+    background-color: var(--main-accent-color);
+    color: var(--night-rider-black);
+
+    cursor: pointer;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 1.5rem;
+}
+
+/*------ Button Section
+*/
+
+.newsletter-sign-up-button,
+.add-to-cart-button,
+.contact-form-submit-button,
+.go-to-checkout-button,
+.admin-form-submit-button,
+.log-out-button {
+    min-width: 10ch;
+    min-height: 44px;
+}
+
+.cart-change-qty-button {
+    margin: 0.6rem;
+}
+
+.log-out-button {
+
+}
+
+.newsletter-sign-up-button,
+.add-to-cart-button,
+.contact-form-submit-button,
+.go-to-checkout-button,
+.cart-change-qty-button,
+.admin-form-submit-button,
+.log-out-button {
+    border: none;
+    font-family: inherit;
+    padding: 0;
+    cursor: pointer;
+
+    border: 2px solid currentcolor;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--green-button-color);
+    color: var(--ghost-white);
+    border-radius: 8px;
+    box-shadow: 0 3px 5px var(--night-rider-black);
+
+    padding: 0.25em 0.75em;
+
+    text-align: center;
+    line-height: 1.1;
+
+    transition: 220ms all ease-in-out;
+}
+
+.newsletter-sign-up-button:hover,
+.add-to-cart-button:hover,
+.contact-form-submit-button:hover,
+.go-to-checkout-button:hover,
+.cart-change-qty-button:hover,
+.admin-form-submit-button:hover,
+.log-out-button:hover {
+    background-color: scale-color(var(--green-button-color), brightness(-20%));
+}
+
+.newsletter-sign-up-button:focus,
+.add-to-cart-button:focus,
+.contact-form-submit-button:focus,
+.go-to-checkout-button:focus,
+.cart-change-qty-button:focus,
+.admin-form-submit-button:focus,
+.log-out-button:focus {
+    outline-style: solid;
+    outline-color: transparent;
+    box-shadow: 0 0 0 4px scale-color(var(--green-button-color), brightness(-40%));
+}
+
+.newsletter-sign-up-button:active,
+.add-to-cart-button:active,
+.contact-form-submit-button:active,
+.go-to-checkout-button:active,
+.cart-change-qty-button:active,
+.admin-form-submit-button:active,
+.log-out-button:active {
+    background-color: scale-color(var(--green-button-color), brightness(-20%));
+}
+
+/*********** 7. ANIMATIONS
+*/
+nav {
+    transition: top 1s;
+}
+
+.scroll-to-top-button {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all .7s ease-in-out;
+}
+
+.showBtn {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes slide-in {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0%);
+    }
+}
+
+.about-card-media {
+    animation: slide-in 2.5s;
+}
+
+/*********** 8. MEDIA QUERIES
+*/
+
+@media only screen and (max-width:320px)  { /* smartphones, iPhone, portrait 480x320 phones */ }
+
+@media only screen and (max-width:481px)  { /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ 
+    .nav-bar-grid-item-logo {
+        display: none;
+    }
+}
+
+/*
+@media only screen and (max-width: 100px) {
+    .narrow {
+        display: block;
+    }
+}
+*/
+
+@media only screen and (min-width: 961px) {
+    .narrow {
+        display: none;
+    }
+}
+
+@media only screen and (max-width:641px)  { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ }
+@media only screen and (max-width:961px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */ }
+@media only screen and (max-width:1025px) { /* big landscape tablets, laptops, and desktops */ }
+@media only screen and (max-width:1281px) { /* hi-res laptops and desktops */ }
+
+/*********** X. CSS RESET 
+*/
+
+html {
+    box-sizing: border-box; 
+} 
+
+*, *:before, *:after { 
+    box-sizing: inherit; 
+}
+
+body { 
+    padding: 0; 
+    margin: 0; 
+    border: 0; 
+    vertical-align: baseline; 
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1.5;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+a {
+    cursor: pointer;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+img, iframe {
+    vertical-align: bottom;
+    max-width: 100%;
+}
+
+input, textarea, select {
+    font: inherit;
+}
+
+button {
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+/*********** XX. TESTING CSS 
+*/
+
+/*
+ Aa script that adds an outline to each element on the page with a random color.
+ [].forEach.call($$("*"),function(a){a.style.outline="1px solid #"+(~~(Math.random()*(1<<24))).toString(16)})
+*/
+
+/*
+* {
+    outline: solid 1px darkred;
+}
+*/
