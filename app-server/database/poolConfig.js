@@ -20,16 +20,17 @@ const devDatabaseConfig = {
 
 // Production postgres addon database
 
+const prodDatabaseURL = process.env.DATABASE_URL;
+
+const prodDatabaseConfig = {
+  connectionString: prodDatabaseURL,
+}
+
 const prodUser = process.env.REACT_APP_post_prod_user;
 const prodHost = process.env.REACT_APP_post_prod_host;
 const prodDb = process.env.REACT_APP_post_prod_db;
 const prodPassword = process.env.REACT_APP_post_prod_password;
 const prodPort = process.env.REACT_APP_post_prod_port;
-
-
-const prodDatabaseConfig = {
-  connectionString: process.env.DATABASE_URL,
-}
 
 /*
 const prodDatabaseConfig = {
