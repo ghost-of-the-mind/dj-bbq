@@ -26,12 +26,12 @@ const prodDb = process.env.REACT_APP_post_prod_db;
 const prodPassword = process.env.REACT_APP_post_prod_password;
 const prodPort = process.env.REACT_APP_post_prod_port;
 
-/*
+
 const prodDatabaseConfig = {
   connectionString: process.env.DATABASE_URL,
 }
-*/
 
+/*
 const prodDatabaseConfig = {
   user: prodUser,
   host: prodHost,
@@ -40,6 +40,7 @@ const prodDatabaseConfig = {
   port: prodPort,
   sslmode: 'require',
 }
+*/
 
 const poolConfig = nodeEnv ? devDatabaseConfig : prodDatabaseConfig;
 

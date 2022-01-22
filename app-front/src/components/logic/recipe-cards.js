@@ -27,7 +27,7 @@ const RecipeSection = () => {
                 
             } catch(error) {
                 // console.error(error);
-                alert("Recipe displaying:" + error);
+                alert("Recipe displaying: " + error);
             }
         };
 
