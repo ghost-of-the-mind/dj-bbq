@@ -33,9 +33,7 @@ const fileUpload = require('express-fileupload'); // Parses multipart/form-data 
             "DELETE", 
             "GET",
         ],
-        "Access-Control-Allow-Origin": [
-            "*"
-        ],
+        "Access-Control-Allow-Origin": "*",
         "Access-Control-Allow-Headers": [
             "Origin", 
             "X-Requested-With", 
