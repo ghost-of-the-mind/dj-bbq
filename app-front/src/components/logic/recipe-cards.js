@@ -14,7 +14,7 @@ const RecipeSection = () => {
     const [recipes, setRecipes] = useState([]);
  
     useEffect(() => {
-        let interval;
+        //* let interval; - sets the fetchapi to trigger in intervals
 
         const fetchData = async () => {
             try {
@@ -33,12 +33,14 @@ const RecipeSection = () => {
 
         fetchData();
 
+        /* - sets the fetchapi to trigger in intervals
         interval = setInterval(() => {
             fetchData()
         }, 86 * 1000)
         return () => {
             clearInterval(interval)
         }
+        */
 
     }, []); // Determine swhen to re-use useEffect, if this changes.
 
