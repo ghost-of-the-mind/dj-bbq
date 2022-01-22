@@ -1,14 +1,8 @@
 const pool = require('../../database/poolConfig.js');
 
-require('dotenv').config();
-
-const nodeEnv = process.env.NODE_ENV !== 'production';
-const devFilter = 'SELECT * FROM recipes ORDER BY recipe_id ASC';
-const prodFilter = 'SELECT * FROM public.recipes ORDER BY recipe_id ASC';
-
 const displayRecipes = (req, res) => {
 
-    const recipeFilter = nodeEnv ? devFilter : prodFilter;
+    const recipeFilter = 'SELECT * FROM recipes ORDER BY recipe_id ASC';
   
     pool.query(recipeFilter, (error, results) => {
       
