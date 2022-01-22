@@ -24,6 +24,12 @@ const fileUpload = require('express-fileupload'); // Parses multipart/form-data 
     const HOST = nodeEnv ? devHost : prodHost;
     const domain = nodeEnv ? devDomain : prodDomain;
 
+    app.use(function (req, res, next) {
+        res.header("Access-Control-Allow-Origin", "*");
+        res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+        next();
+    });
+
 // Sets CORS options for cross origin requests
     const corsOptions = {
         // Allows only the following HTTP requests to go through
@@ -32,6 +38,9 @@ const fileUpload = require('express-fileupload'); // Parses multipart/form-data 
             "POST", 
             "DELETE", 
             "GET",
+        ],
+        "Access-Control-Allow-Origin": [
+            "*"
         ],
         "Access-Control-Allow-Headers": [
             "Origin", 
@@ -74,12 +83,6 @@ const fileUpload = require('express-fileupload'); // Parses multipart/form-data 
             next();
         });
     */
-
-    app.use(function (req, res, next) {
-        res.header("Access-Control-Allow-Origin", "*");
-        res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-        next();
-    });
 
 /*
 //* ------- SERVING HTML IN PRODUCTION - MIDDLEWARE -------
