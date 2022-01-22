@@ -4,23 +4,42 @@ require('dotenv').config();
 
 const nodeEnv = process.env.NODE_ENV !== 'production';
 
-const user = process.env.REACT_APP_post_dev_user;
-const host = process.env.REACT_APP_post_dev_host;
-const db = process.env.REACT_APP_post_dev_db;
-const password = process.env.REACT_APP_post_dev_password;
-const port = process.env.REACT_APP_post_dev_port;
+const devUser = process.env.REACT_APP_post_dev_user;
+const devHost = process.env.REACT_APP_post_dev_host;
+const devDb = process.env.REACT_APP_post_dev_db;
+const devPassword = process.env.REACT_APP_post_dev_password;
+const devPort = process.env.REACT_APP_post_dev_port;
 
 const devDatabaseConfig = {
-    user: user,
-    host: host,
-    database: db,
-    password: password,
-    port: port,
+    user: devUser,
+    host: devHost,
+    database: devDb,
+    password: devPassword,
+    port: devPort,
 }
 
 // Production postgres addon database
+
+const prodUser = process.env.REACT_APP_post_prod_user;
+const prodHost = process.env.REACT_APP_post_prod_host;
+const prodDb = process.env.REACT_APP_post_prod_db;
+const prodPassword = process.env.REACT_APP_post_prod_password;
+const prodPort = process.env.REACT_APP_post_prod_port;
+const prodSSL = process.env.REACT_APP_post_prod_ssl;
+
+/*
 const prodDatabaseConfig = {
   connectionString: process.env.DATABASE_URL,
+}
+*/
+
+const prodDatabaseConfig = {
+  user: prodUser,
+  host: prodHost,
+  database: prodDb,
+  password: prodPassword,
+  port: prodPort,
+  sslmode: prodSSL,
 }
 
 const poolConfig = nodeEnv ? devDatabaseConfig : prodDatabaseConfig;
