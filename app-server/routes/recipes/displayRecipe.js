@@ -10,9 +10,8 @@ const displayRecipes = (req, res) => {
             // console.error(error);
 
             res.status(403).json({
-                success : false,
-                msg : 'Could not display recipes.',
-                error : error,
+                error : 'Could not display recipes.',
+                reason : error,
             })
         }
 

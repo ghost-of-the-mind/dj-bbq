@@ -22,8 +22,11 @@ const devDatabaseConfig = {
 
 const connectionString = process.env.DATABASE_URL;
 
-const prodDatabaseConfig = { 
-    connectionString, 
+const prodDatabaseConfig = {  
+    connectionString: process.env.DATABASE_URL,
+    ssl: {
+        rejectUnauthorized: false,
+    },
 };
 
 const poolConfig = nodeEnv ? devDatabaseConfig : prodDatabaseConfig;
