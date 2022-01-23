@@ -25,7 +25,7 @@ const connectionString = process.env.DATABASE_URL;
 const prodDatabaseConfig = {  
     connectionString: connectionString,
     ssl: {
-        rejectUnauthorized: false,
+        rejectUnauthorized: true,
     },
 };
 
