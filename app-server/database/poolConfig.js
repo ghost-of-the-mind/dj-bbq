@@ -23,7 +23,7 @@ const devDatabaseConfig = {
 const connectionString = process.env.DATABASE_URL;
 
 const prodDatabaseConfig = {  
-    connectionString: process.env.DATABASE_URL,
+    connectionString: connectionString,
     ssl: {
         rejectUnauthorized: false,
     },

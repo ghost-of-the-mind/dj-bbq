@@ -2,7 +2,7 @@ const pool = require('../../database/poolConfig.js');
 
 const displayRecipes = (req, res) => {
 
-    const recipeFilter = 'SELECT * FROM recipes ORDER BY recipe_id ASC';
+    const recipeFilter = 'SELECT * FROM public.recipes ORDER BY recipe_id ASC';
   
     pool.query(recipeFilter, (error, results) => {
       
