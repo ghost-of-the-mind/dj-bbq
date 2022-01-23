@@ -11,7 +11,8 @@ const displayRecipes = (req, res) => {
 
             res.status(403).json({
                 success : false,
-                msg : 'Could not display recipes.'
+                msg : 'Could not display recipes.',
+                error : error,
             })
         }
 
