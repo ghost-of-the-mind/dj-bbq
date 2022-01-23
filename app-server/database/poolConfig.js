@@ -21,12 +21,13 @@ const devDatabaseConfig = {
 // Production postgres addon database
 
 const connectionString = process.env.DATABASE_URL;
+const cert = process.env.CACERT;
 
 const prodDatabaseConfig = {  
     connectionString: connectionString,
     ssl: {
-        rejectUnauthorized: false,
-        ca: process.env.CACERT,
+        rejectUnauthorized: true,
+        ca: cert,
     },
 };
 
