@@ -22,7 +22,11 @@ const devDatabaseConfig = {
 
 const connectionString = process.env.DATABASE_URL;
 
-const poolConfig = nodeEnv ? devDatabaseConfig : connectionString;
+const prodDatabaseConfig = { 
+    connectionString,
+};
+
+const poolConfig = nodeEnv ? devDatabaseConfig : prodDatabaseConfig;
 
 // pools will use environment variables
 // for connection information
