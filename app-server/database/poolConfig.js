@@ -20,6 +20,7 @@ const devDatabaseConfig = {
 
 // Production postgres addon database
 
+/*
 const connectionString = process.env.DATABASE_URL;
 const cert = process.env.CACERT;
 
@@ -29,6 +30,15 @@ const prodDatabaseConfig = {
         rejectUnauthorized: true,
         ca: cert,
     },
+};
+*/
+
+const prodDatabaseConfig = {  
+    user: process.env.USERNAME,
+    host: process.env.HOSTNAME,
+    database: process.env.DATABASE,
+    password: process.env.PASSWORD,
+    port: process.env.DB_PORT,
 };
 
 const poolConfig = nodeEnv ? devDatabaseConfig : prodDatabaseConfig;
