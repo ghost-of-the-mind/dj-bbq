@@ -39,6 +39,7 @@ const prodDatabaseConfig = {
     database: process.env.DATABASE,
     password: process.env.PASSWORD,
     port: process.env.DB_PORT,
+    ssl: true,
 };
 
 const poolConfig = nodeEnv ? devDatabaseConfig : prodDatabaseConfig;
