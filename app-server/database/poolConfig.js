@@ -26,6 +26,7 @@ const prodDatabaseConfig = {
     connectionString: connectionString,
     ssl: {
         rejectUnauthorized: false,
+        ca: process.env.CACERT,
     },
 };
 
