@@ -20,42 +20,12 @@ const devDatabaseConfig = {
 
 // Production postgres addon database
 
-const prodDatabaseURL = process.env.DATABASE_URL;
+const connectionString = process.env.DATABASE_URL;
 
-const prodDatabaseConfig = {
-  connectionString: prodDatabaseURL,
-}
-
-const prodUser = process.env.REACT_APP_post_prod_user;
-const prodHost = process.env.REACT_APP_post_prod_host;
-const prodDb = process.env.REACT_APP_post_prod_db;
-const prodPassword = process.env.REACT_APP_post_prod_password;
-const prodPort = process.env.REACT_APP_post_prod_port;
-
-/*
-const prodDatabaseConfig = {
-  user: prodUser,
-  host: prodHost,
-  database: prodDb,
-  password: prodPassword,
-  port: prodPort,
-  sslmode: 'require',
-}
-*/
-
-const poolConfig = nodeEnv ? devDatabaseConfig : prodDatabaseConfig;
-
+const poolConfig = nodeEnv ? devDatabaseConfig : connectionString;
 
 // pools will use environment variables
 // for connection information
 const pool = new Pool(poolConfig);
-
-  /*
-  Accessing the database
-    pool.query('SELECT NOW()', (err, res) => {
-        console.log(err, res)
-        pool.end()
-    })
-  */
 
 module.exports = pool;
