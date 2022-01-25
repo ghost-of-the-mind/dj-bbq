@@ -94,6 +94,7 @@ const fileUpload = require('express-fileupload'); // Parses multipart/form-data 
     }
 */
 
+/*
 //* ------- STATIC ASSETS -------
 
 // From where the app will serve static files
@@ -105,6 +106,7 @@ const fileUpload = require('express-fileupload'); // Parses multipart/form-data 
         // Serve static files from production version aka build folder 
             app.use(express.static(path.join(__dirname, '../app-front/build'))); 
     }
+*/
 
 //* -------------- SERVER ----------------
        
@@ -116,6 +118,11 @@ const fileUpload = require('express-fileupload'); // Parses multipart/form-data 
 //* ------- ROUTES / ENDPOINTS ---------
 
 // Go to domain/test to make sure the basic API functioning is working properly
+
+    app.get('/', (req, res) => {
+        res.status(200).send('The DJ-BBQ API is online.')
+    });
+
     app.get('/test', (req, res) => {
         res.status(200).send('The Basic API endpoints are working.')
     });

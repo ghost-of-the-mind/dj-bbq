@@ -1,4 +1,4 @@
-const { Pool } = require('pg')
+const { Pool } = require('pg');
 
 require('dotenv').config();
 
@@ -18,7 +18,8 @@ const devDatabaseConfig = {
 
 const prodDatabaseConfig = { 
     connectionString: process.env.DATABASE_URL.replace('?sslmode=require', ''),
-    ssl: { rejectUnauthorized: false }
+    ssl: { rejectUnauthorized: false },
+    ca: process.env.DATABASE_CERT,
 };
 
 const poolConfig = nodeEnv ? devDatabaseConfig : prodDatabaseConfig;
