@@ -16,9 +16,23 @@ const devDatabaseConfig = {
 
 // Production (Digital Ocean) Postgres config
 
+/*
 const prodDatabaseConfig = { 
-    connectionString: process.env.DATABASE_URL,
+    connectionString: process.env.DATABASE_URL, // replace('?sslmode=require', ''),
     ssl: { rejectUnauthorized: false },
+    ca: process.env.DATABASE_CERT,
+};
+*/
+
+const prodDatabaseConfig = { 
+    user: process.env.DATA_username,
+    host: process.env.DATA_host,
+    database: process.env.DATA_database,
+    password: process.env.DATA_password,
+    port: process.env.DATA_port,
+    ssl: { 
+        rejectUnauthorized: false 
+    },
     ca: process.env.DATABASE_CERT,
 };
 
