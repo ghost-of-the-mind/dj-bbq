@@ -5,8 +5,6 @@ import customProxy from './fetch-config';
 import clockIcon from '../../assets/ux/recipe-card-icons/clock.png';
 import servingsIcon from '../../assets/ux/recipe-card-icons/servings.png';
 
-require('dotenv').config();
-
 const publicPath = process.env.PUBLIC_URL; // %PUBLIC_URL%/
 
 const RecipeSection = () => {

@@ -5,8 +5,6 @@ import { Navigate } from 'react-router-dom';
 import AdminAddRecipe from './admin-actions/admin-add-recipe.js';
 import AdminUploadRecipeImg from './admin-actions/admin-upload-recipe-img.js';
 
-require('dotenv').config();
-
 const userfrontTenantKey = process.env.REACT_APP_userfront_tenant_key;
 
 // Initialize the Userfront React library with your account ID using 

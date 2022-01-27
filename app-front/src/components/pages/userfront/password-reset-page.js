@@ -1,8 +1,6 @@
 import React from 'react';
 import Userfront from "@userfront/react";
 
-require('dotenv').config();
-
 const userfrontTenantKey = process.env.REACT_APP_userfront_tenant_key;
 
 // Initialize the Userfront React library with your account ID using 
