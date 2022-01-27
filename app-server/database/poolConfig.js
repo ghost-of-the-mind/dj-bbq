@@ -2,7 +2,7 @@ const { Pool } = require('pg');
 
 require('dotenv').config();
 
-const nodeEnv = process.env.NODE_ENV !== 'production';
+const nodeEnv = process.env.REACT_APP_NODE_ENV !== 'production';
 
 // Development Postgres config
 

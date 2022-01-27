@@ -1,6 +1,6 @@
 require('dotenv').config();
 
-const nodeEnv = process.env.NODE_ENV !== 'production';
+const nodeEnv = process.env.REACT_APP_NODE_ENV !== 'production';
 
 // Allows Stripe to authentificate our API requests with our key
 const stripeSecretKey = nodeEnv ? process.env.REACT_APP_stripe_dev_secret_key : process.env.REACT_APP_stripe_prod_secret_key;

@@ -1,6 +1,6 @@
 require('dotenv').config();
 
-const nodeEnv = process.env.NODE_ENV !== 'production';
+const nodeEnv = process.env.REACT_APP_NODE_ENV !== 'production';
 
 const YOUR_DOMAIN = nodeEnv ? process.env.REACT_APP_dev_domain : process.env.REACT_APP_prod_domain;
 

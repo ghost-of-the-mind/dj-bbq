@@ -9,7 +9,7 @@ const fileUpload = require('express-fileupload'); // Parses multipart/form-data 
 // Variables - Provides access to variables from the .env file by using process.env.REACT_APP_variable_name
     require('dotenv').config();
 
-    const nodeEnv = process.env.NODE_ENV !== 'production';
+    const nodeEnv = process.env.REACT_APP_NODE_ENV !== 'production';
 
     const devPort = process.env.REACT_APP_server_dev_port;
     const prodPort = process.env.PORT;
