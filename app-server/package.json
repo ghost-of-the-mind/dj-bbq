@@ -15,6 +15,7 @@
     "@stripe/stripe-js": "^1.22.0",
     "@userfront/react": "^0.2.22",
     "cors": "^2.8.5",
+    "dotenv": "^14.3.2",
     "express": "^4.17.2",
     "express-fileupload": "^1.2.1",
     "helmet": "^5.0.2",
@@ -28,7 +29,6 @@
   },
   "devDependencies": {
     "concurrently": "^7.0.0",
-    "dotenv": "^14.3.2",
     "nodemon": "^2.0.15",
     "source-map-explorer": "^2.5.2"
   },
