@@ -10,7 +10,7 @@
 
 @media screen and (min-width: 320px) {
   :root {
-    font-size: calc(17px + 6 * ((100vw - 320px) / 680));
+    font-size: calc(15px + 6 * ((100vw - 320px) / 680));
   }
 }
 

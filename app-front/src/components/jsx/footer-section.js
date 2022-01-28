@@ -12,6 +12,10 @@ const FooterSection = () => {
 
         <h2 className='footer-title'><small>&#9733; &#9733; &#9733;</small> Hungry for more? <small>&#9733; &#9733; &#9733;</small></h2>
 
+        <aside className="prototype-text center-text">
+            <p>The option to subscribe to this newsletter is functional. Yet, since this website is only meant as a prototype, the newsletter form has been disabled for the time being.  </p>
+        </aside>
+
             <section className='newsletter-section'>
                 <h4>Sign Up to our Newsletter!</h4>
                 <form action="/newsletter" method="POST">

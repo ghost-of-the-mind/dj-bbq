@@ -534,6 +534,17 @@ strong {
     text-align: center;
 }
 
+.prototype-text {
+    width: 80%;
+    
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.prototype-text p {
+    font-size: 0.80rem;
+}
+
 .responsive-media {
     width: 100%;
     height: auto;
