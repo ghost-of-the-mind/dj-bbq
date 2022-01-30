@@ -2,8 +2,6 @@ require('dotenv').config();
 
 const nodeEnv = process.env.REACT_APP_NODE_ENV !== 'production';
 
-const YOUR_DOMAIN = nodeEnv ? process.env.REACT_APP_dev_domain : process.env.REACT_APP_prod_domain;
-
 //* Allows Stripe to authentificate our API requests with our key
 const stripeSecretKey = nodeEnv ? process.env.REACT_APP_stripe_dev_secret_key : process.env.REACT_APP_stripe_prod_secret_key;
 const stripe = require('stripe')(stripeSecretKey);
@@ -136,8 +134,8 @@ const createCheckoutSession = async (req, res) => {
         //* Specify URLs for success and cancel pages—make sure they are publicly accessible so Stripe can redirect 
         //* customers to them. You can also handle both the success and canceled states with the same URL.
         // Extra customization for the success and cancel pages - https://stripe.com/docs/payments/checkout/custom-success-page
-            success_url: `${YOUR_DOMAIN}/cart/success`,
-            cancel_url: `${YOUR_DOMAIN}/cart/cancel`,
+            success_url: 'https://dj-bbq-i5gdc.ondigitalocean.app/cart/success',
+            cancel_url: 'https://dj-bbq-i5gdc.ondigitalocean.app/cart/cancel',
         //* Activate Stripe Tax to monitor your tax obligations, automatically collect tax, and access the reports you need to file returns.
         //* automatic_tax: {enabled: true},
     });
