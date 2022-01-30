@@ -96,7 +96,7 @@ const AdminAddRecipe = () => {
                 </section>
 
                 <section>
-                    <button id='admin-form-submit-button' class='admin-form-submit-button' type='submit'>
+                    <button id='admin-form-submit-button' className='admin-form-submit-button' type='submit'>
                         Submit Recipe
                     </button>
                 </section>   

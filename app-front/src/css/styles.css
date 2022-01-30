@@ -87,7 +87,7 @@ input, textarea, select {
     display: grid;
     
     grid-template-rows: auto;
-    grid-template-columns: repeat(auto-fit, minmax(89px, 100px));    
+    grid-template-columns: repeat(auto-fit, minmax(30px, 5px));    
 
     align-items: center;
     align-content: center;
@@ -289,7 +289,7 @@ main article {
 
 .recipe-card-clock-icon,
 .recipe-card-servings-icon {
-    max-height: 58px;
+    height: 7vh;
 }
 
 /*------ Contact Form Section
@@ -309,7 +309,6 @@ main article {
 
 .contact-form {
     text-align: center;
-    max-width: 90%;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 2rem;
@@ -372,7 +371,7 @@ main article {
 }
 
 .product-card-image {
-    max-height: 280px;
+    max-height: 15rem;
 
     display: block;
 }
@@ -385,16 +384,22 @@ main article {
 */
 
 .cart-badge {
-    font-size: 0.5rem;
-    background: #FD9C01;
-    color: #f8f8ff;
-    padding: 5px 7px;
+    position: absolute;
     vertical-align: top;
-    margin-left: -0.2rem;
 
-    padding-left: 9px;
-    padding-right: 9px;
-    border-radius: 9px;
+    font-size: 0.5rem;
+
+    background: var(--green-button-color);
+    color: #f8f8ff;
+
+    margin-left: 0.25rem;
+
+    padding-top: 0.1rem;
+    padding-bottom: 0.1rem ;
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
+
+    border-radius: 50%;
 }
 
 .cart-section {
@@ -472,7 +477,7 @@ footer {
 
 .footer-social-icons img {
     width: auto;
-    max-height: 62px;
+    max-height: 8vh;
 
     margin-left: 1rem;
     margin-right: 1rem;

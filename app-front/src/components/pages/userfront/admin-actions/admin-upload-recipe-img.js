@@ -28,7 +28,7 @@ const AdminUploadRecipeImg = () => {
                 </section>
 
                 <section>
-                    <button class='admin-form-submit-button' id='admin-form-upload=img-button' type='submit'>
+                    <button className='admin-form-submit-button' id='admin-form-upload=img-button' type='submit'>
                         Upload Image
                     </button>
                 </section>   

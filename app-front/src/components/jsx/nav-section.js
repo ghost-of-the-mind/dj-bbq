@@ -23,7 +23,7 @@ const NavSection = (props) => {
                     <NavLink to="/store">Store</NavLink>
                 </li>
                 <li>
-                    <NavLink to="/cart">Cart {countCartItems ? <span class='cart-badge'>{countCartItems}</span> : null}</NavLink>
+                    <NavLink to="/cart">Cart {countCartItems ? <span className='cart-badge'>{countCartItems}</span> : null}</NavLink>
                 </li>
             </ul>
         </nav>

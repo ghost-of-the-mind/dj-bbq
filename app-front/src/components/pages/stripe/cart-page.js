@@ -80,9 +80,9 @@ const CartPage = (props) => {
                     <p className='cart-item-price'>
                     
                         <button className='cart-change-qty-button' onClick={() => onAdd(item)}>+</button>
-                            <span class="narrow"></span>
+                            <span className="narrow"></span>
                         {item.qty} * {currencyFormatter.format(item.unit_amount / 100)}
-                            <span class="narrow"></span>
+                            <span className="narrow"></span>
                         <button className='cart-change-qty-button' onClick={() => onRemove(item)}>-</button>
                       
                     </p>
