@@ -1,6 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+// import { useState, useEffect } from 'react';
+// import customProxy from './fetch-config';
 
-import customProxy from './fetch-config';
+import recipeData from './recipeData.js';
 
 import clockIcon from '../../assets/ux/recipe-card-icons/clock.png';
 import servingsIcon from '../../assets/ux/recipe-card-icons/servings.png';
@@ -9,6 +11,7 @@ const publicPath = process.env.PUBLIC_URL; // %PUBLIC_URL%/
 
 const RecipeSection = () => {
 
+    /* 
     const [recipes, setRecipes] = useState([]);
  
     useEffect(() => {
@@ -40,11 +43,15 @@ const RecipeSection = () => {
         }
         */
 
+    /*
+
     }, []); // Determine swhen to re-use useEffect, if this changes.
+
+    */
 
     return (
         <section className='recipe-card-grid'>
-            {recipes.map(recipe => 
+            {recipeData.map(recipe => // recipes.map origionally
                 (
                     <article key={recipe.recipe_id} className='recipe-card'>
                 

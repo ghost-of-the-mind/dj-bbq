@@ -124,7 +124,7 @@ const fileUpload = require('express-fileupload'); // Parses multipart/form-data 
     });
 
     app.get('/test', (req, res) => {
-        res.status(200).send('The Basic API endpoints are working.')
+        res.status(200).send(`The Basic API endpoints are working.`)
     });
 
 // Imports all of the routes from ./routes/index.js
